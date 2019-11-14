@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pokedex
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-list>
+     <ion-item class="poke"  *ngFor="let poke of pokemons">
+      <ion-avatar item-left >
+        <img src="{{poke.thumbnail.path}}.{{poke.thumbnail.extension}}">
+      </ion-avatar>
+      <h2>{{poke.name}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
