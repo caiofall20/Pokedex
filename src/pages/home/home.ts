@@ -8,8 +8,10 @@ import { PokeService } from '../../providers/poke-service/poke-service';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public obj: any;
-  public pokemons: any;
+  pokemon = [];
+  public data: any;
+  public result: any;
+
 
   constructor(public navCtrl: NavController, public pokeService: PokeService) {
     this.getAllPokemons();
@@ -17,10 +19,14 @@ export class HomePage {
 
   getAllPokemons() {
     this.pokeService.load()
-      .then(data => {
-        this.obj = data;
-        this.pokemons = this.obj.data.results;
-      });
+    .then(data => {
+      this.pokemon = data;
+      this.result = this.pokemon;
+     console.log(this.pokemon)
+
+
+    });
+
   }
 
 }

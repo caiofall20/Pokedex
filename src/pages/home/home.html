@@ -6,13 +6,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="home">
+ <ion-content class="home">
   <ion-list>
-     <ion-item class="poke"  *ngFor="let poke of pokemons">
+     <ion-item class="poke"  *ngFor="let poke of pokemon.pokemon">
       <ion-avatar item-left >
-        <img src="{{poke.thumbnail.path}}.{{poke.thumbnail.extension}}">
+        <img src="{{poke.img}}">
       </ion-avatar>
       <h2>{{poke.name}}</h2>
     </ion-item>
   </ion-list>
 </ion-content>
+
+
