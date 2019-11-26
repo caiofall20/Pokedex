@@ -7,8 +7,9 @@
 </ion-header>
 
  <ion-content class="home">
+    <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
   <ion-list>
-     <ion-item class="poke"  *ngFor="let poke of pokemon.pokemon">
+     <ion-item class="poke"  *ngFor="let poke of pokemon.pokemon | search : terms | sort: {property: column, order: order}"  (click)="selectPokemon(poke)">
       <ion-avatar item-left >
         <img src="{{poke.img}}">
       </ion-avatar>
@@ -16,6 +17,8 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+
 
 
 

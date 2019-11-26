@@ -1,3 +1,4 @@
+import { DetailPage } from './../pages/detail/detail';
 import { PokeService } from './../providers/poke-service/poke-service';
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { SortPipe } from '../pipes/sort/sort';
+import { SearchPipe } from '../pipes/search/search';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HttpModule } from '@angular/http';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DetailPage,
+    SearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import { HttpModule } from '@angular/http';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DetailPage
   ],
   providers: [
     StatusBar,
