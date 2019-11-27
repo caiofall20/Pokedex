@@ -4,13 +4,24 @@ page-detail {
 
 .img-detail {
   max-width: 100%;
-    border: 0;
-    position: absolute;
-    bottom: 84%;
-    right: 30%;
+  border: 0;
+  position: absolute;
+  bottom: 64%;
+  right: 30%;
+  z-index: 1;
 }
 
 ion-card{
-  margin-top: 70px;
+  position: absolute;
+  top: 111px;
+  left: 1px;
+}
+
+.card-header-md{
+  text-align: center;
+}
+
+.card-content-md{
+  text-align: center;
 }
 

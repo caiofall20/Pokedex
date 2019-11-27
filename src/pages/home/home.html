@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
       Pokedex
     </ion-title>
@@ -7,6 +7,9 @@
 </ion-header>
 
  <ion-content class="home">
+
+    <img class = "pokeball" src="assets/imgs/pokeball.png">
+
     <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
   <ion-list>
      <ion-item class="poke"  *ngFor="let poke of pokemon.pokemon | search : terms | sort: {property: column, order: order}"  (click)="selectPokemon(poke)">

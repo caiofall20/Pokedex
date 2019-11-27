@@ -37,7 +37,7 @@ export class HomePage {
   }
 
   selectPokemon(pokemon: any) {
-this.navCtrl.push(DetailPage,{poke:pokemon});
+    this.navCtrl.push(DetailPage,{poke:pokemon});
   }
 
 }

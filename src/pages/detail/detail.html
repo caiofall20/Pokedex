@@ -5,8 +5,8 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>detail</ion-title>
+  <ion-navbar color="danger">
+    <ion-title>Detalhes</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,9 +15,14 @@
     <ion-card>
         <ion-card-header>
           <ion-card-title>{{poke.name}}</ion-card-title>
+          <p>Altura: {{poke.height}}</p>
+          <p>Peso: {{poke.weight}}</p>
         </ion-card-header>
         <ion-card-content>
-          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+          <p>Tipo</p>
+          <ion-badge color="danger">{{poke.type}}</ion-badge>
+          <p>Fraqueza</p>
+          <ion-badge color="success">{{poke.weaknesses}}</ion-badge>
         </ion-card-content>
       </ion-card>
 
